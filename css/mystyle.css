@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(8, 1, 1);
+    color: black;
+    line-height: 1.5;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+/* navbar */
+.nav {
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    position: relative;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 30px;
+    color: red;
+    padding: 10px 10px 10px 10px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+
+  /* content */
+.section {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 25px;
+}
+
+.coverphoto {
+    display: block;
+    border: 5px solid blue;
+    border-radius: 20%;
+}
+
+.coverphoto2 {
+    display: none;
+}
+
+.topphoto {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    column-gap: 10px;
+    grid-template-areas: 
+        "coverphoto info";
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.Body {
+    margin-left: auto;
+    margin-right: auto;
+    color: red;
+}
+
+.aboutMSA {
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 3em;
+}
+
+.aboutP {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
+.info {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.bottomphoto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.twogirls {
+    display: block;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    border: 5px solid blue;
+    border-radius: 20%;
+}
+
+.hannible {
+    display: block;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    border: 5px solid blue;
+    border-radius: 20%;
+}
+
+.footer {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    margin-top: 20px;
+}
+
+.copyright {
+    color: red;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Media Querries */
+
+@media only screen and (max-width: 1072px) {
+    
+
+    .topphoto {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .photo1 {
+        text-align: center;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        
+        
+    }
+
+    .info {
+        grid-row-start: 0;
+        grid-row-end: 1;
+        
+    }
+
+    .coverphoto {
+        display: none;
+    }
+
+    .coverphoto2 {
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: "50%vw";
+        border: 5px solid blue;
+        border-radius: 20%;
+        margin-top: 15px;
+
+    }
+ 
+    
+    
+} 
+
+@media (max-width: 934px)  {
+
+}
+
+@media (max-width:600px) {
+    /* navbar */
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+    }
+}
